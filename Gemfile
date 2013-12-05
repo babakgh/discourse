@@ -66,7 +66,7 @@ gem 'barber'
 
 gem 'vestal_versions', git: 'https://github.com/SamSaffron/vestal_versions'
 
-gem 'message_bus', git: 'https://github.com/SamSaffron/message_bus'
+gem 'message_bus'
 gem 'rails_multisite', path: 'vendor/gems/rails_multisite'
 gem 'simple_handlebars_rails', path: 'vendor/gems/simple_handlebars_rails'
 
@@ -171,7 +171,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'librarian', '>= 0.0.25', require: false
   # https://github.com/ctran/annotate_models/pull/106
-  gem 'annotate', :git => 'https://github.com/SamSaffron/annotate_models.git'
+  gem 'annotate'
 end
 
 
