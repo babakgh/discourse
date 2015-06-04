@@ -1,0 +1,25 @@
+---
+services:
+
+  web:
+    git: https://github.com/babakgh/discourse.git
+    git_branch: docker
+    command: bundle exec rails server -p _env:PORT
+    ports: 
+      - 9292:80:443
+    env_vars:
+      RAILS_ENV: production
+      RACK_ENV: production
+
+  worker:
+    git: https://github.com/babakgh/discourse.git
+    git_branch: docker
+    command: bundle exec sidekiq -e _env:RAILS_ENV
+    
+    env_vars:
+      RAILS_ENV: production
+      RACK_ENV: production
+
+databases:
+  - postgresql
+  - redis
